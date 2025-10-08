@@ -12,13 +12,13 @@ jobs:
     name: A job running on windows
     runs-on: windows-latest
     steps:
-      - name: Dirst step in windows job
+      - name: First step in windows job
       - run: date
       - run: ls 
   dependent-job-1:
      needs: [job-on-ubuntu, job-on-windows]
-     runs-on: maxos-latest
-     name: A job that run on mac after twoo jobs
+     runs-on: macos-latest
+     name: A job that run on mac after first two jobs
      steps:
       - run: pwd
       - name: new step
